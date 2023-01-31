@@ -1,0 +1,53 @@
+@import '../../styles/typography/typography';
+@import'../../styles/variables/variables';
+@import'../../styles/abstracts/reset';
+@import'../../styles/breakepoints/breakepoints';
+
+.container {
+    width: 70%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    @include bp-1023 {
+        flex-direction: column-reverse;
+    }
+
+
+    &__description {
+        width: 81%;
+        
+        padding-top: 49px ;
+        margin: 0 130px 314px;
+
+        @include headline-4;
+        @include bp-1023 {
+            width: 91%;
+            padding: 34px 0 32px;
+            margin: 0 auto;
+    }
+}
+
+&__contacts{
+    padding-top: 49px;
+
+    @include bp-1023 {
+        padding-top: 33px;
+        margin: 0 auto;
+}
+
+&_con{
+    width: 188px;
+
+    display: flex;
+
+    margin-bottom: 25px;
+}
+}
+
+}
+
+.icon{
+    padding-right: 10px;
+}

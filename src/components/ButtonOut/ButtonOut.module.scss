@@ -1,0 +1,39 @@
+@import '../../styles/typography/typography';
+@import'../../styles/variables/variables';
+@import'../../styles/abstracts/reset';
+@import'../../styles/breakepoints/breakepoints';
+
+
+.btn_out{
+        cursor: pointer; 
+    
+        position: absolute;
+        top: 32px;
+        right: 80px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 16px;
+    
+        border: 1px solid $white;
+        border-radius: 8px;
+    
+        background-color: transparent;
+    
+        @include headline-4;
+    
+        color: $white;
+    
+        @include bp-743{
+            display: none;
+        }
+    
+        &_320 {
+            position: absolute;
+            top: 23px;
+            right: 27px;
+    
+            cursor: pointer;
+        }
+}

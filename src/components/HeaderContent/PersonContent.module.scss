@@ -1,0 +1,97 @@
+@import '../../styles/typography/typography';
+@import'../../styles/variables/variables';
+@import'../../styles/abstracts/reset';
+@import'../../styles/breakepoints/breakepoints';
+
+.content{
+    width: 58%;
+
+    @include bp-1023 {
+        width: 70%;
+    }
+
+    @include bp-743{
+        width: 90%;
+        flex-direction: column-reverse;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+
+ &__btn_back {
+    
+        cursor: pointer; 
+    
+        position: absolute;
+        top: 32px;
+        left: 80px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px 16px;
+    
+        border: 1px solid $white;
+        border-radius: 8px;
+    
+        background-color: transparent;
+    
+        @include headline-4;
+    
+        color: $white;
+    
+        @include bp-743{
+            display: none;
+        }
+    
+        &_320 {
+            position: absolute;
+            top: 23px;
+            left: 16px;
+    
+            cursor: pointer;
+        }
+
+ }   
+
+ &__avatar {
+    width: 187px;
+    height: 187px;
+
+    border-radius: 50%;
+
+    margin-right: 32px;
+
+    @include bp-743 {
+        margin-bottom: 39px;
+    }
+ }   
+    
+ &__user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+ }
+
+ &__title {
+    @include headline-1;
+    margin: 64px 0 16px;
+
+    @include bp-743{
+      @include headline-36;
+      margin-top: 64px;
+    }
+}
+
+&__span {
+    @include headline-3;
+    text-align: center;
+    margin-bottom: 64px;
+
+    @include bp-743{
+        @include headline-4;
+      }
+}
+
+}
