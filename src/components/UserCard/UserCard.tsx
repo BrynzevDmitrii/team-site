@@ -3,7 +3,6 @@ import { FunctionComponent } from "react";
 import { clsx } from "clsx";
 
 import styles from "./UserCard.module.scss";
-import { useAppDispatch } from "../../hook";
 
 interface UserCardProps {
   openPopup: (bool: boolean) => void;
@@ -17,8 +16,6 @@ interface UserCardProps {
 const UserCard: FunctionComponent<UserCardProps> = (
   props: UserCardProps
 ): JSX.Element => {
-
-  const dispatch = useAppDispatch()
   const castomAlert = (isAuth: boolean): void => {
     if (!isAuth) {
       props.openPopup(true);
