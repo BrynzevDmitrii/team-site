@@ -38,7 +38,7 @@ const registerSlice = createSlice({
     reducers: {      
         addNewUser(state, action: PayloadAction<ActionUser>){
 
-            const emailRgx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
+            const emailRgx = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/ ;
             let email: string;
 
             if(action.payload.email){
