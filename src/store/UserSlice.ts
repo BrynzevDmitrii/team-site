@@ -7,7 +7,6 @@ type User={
     first_name: string,
     last_name : string,
     avatar: string
-    isLiked : boolean
 }
 
 type PersonData = {
@@ -57,7 +56,7 @@ export const fetchPerson = createAsyncThunk<PersonData, string, { rejectValue: s
     'userSlice/fetchPerson',
     async function (id:string, { rejectWithValue } ) {
         const response =  axios(`https://reqres.in/api/users/${id}`);
-        const personData = (await response).data.isLiked 
+        const personData = (await response).data
         if(!(await response).status) {
             return rejectWithValue('Server error')
         }
